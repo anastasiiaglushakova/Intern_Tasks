@@ -2,7 +2,6 @@
 #define WORKER_HPP
 
 #include <QObject>
-#include <QThread>
 
 // Класс "тяжёлой задачи", работающей в своём потоке
 class Worker : public QObject
@@ -21,7 +20,7 @@ public slots:
     void doWork(); // Основной расчёт
 
 private:
-    int m_id; // Уникальный идентификатор задачи
+    const int m_id; // Уникальный идентификатор задачи
 };
 
 #endif // WORKER_HPP
